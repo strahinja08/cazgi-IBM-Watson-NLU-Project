@@ -75,7 +75,8 @@ class App extends React.Component {
   render() {
     return (  
       <div className="App">
-      <button className="btn btn-info" onClick={()=>{this.renderOutput('text')}}>Text</button>
+        <h1 className='App-header'>Sentiment Analyzer</h1>
+        <button className="btn btn-info" onClick={()=>{this.renderOutput('text')}}>Text</button>
         <button className="btn btn-dark"  onClick={()=>{this.renderOutput('url')}}>URL</button>
         <br/><br/>
         {this.state.innercomp}
@@ -83,7 +84,8 @@ class App extends React.Component {
         <button className="btn-primary" onClick={this.sendForSentimentAnalysis}>Analyze Sentiment</button>
         <button className="btn-primary" onClick={this.sendForEmotionAnalysis}>Analyze Emotion</button>
         <br/>
-            {this.state.sentimentOutput}
+        {this.state.sentimentOutput}
+        {/* {console.info(this.state.sentimentOutput)} */}
       </div>
     );
     }
