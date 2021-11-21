@@ -49,8 +49,9 @@ class App extends React.Component {
         let output = data.label;
         let color = "white"
         switch(output) {
-          case "positive": color = "black";break;
-          case "negative": color = "black";break;
+          case "positive": color = "green";break;
+          case "negative": color = "red";break;
+          case "neutral": color = "yellow";break;
           default: color = "black";
         }
         output = <div style={{color:color,fontSize:20}}>{output}</div>
@@ -85,7 +86,6 @@ class App extends React.Component {
         <button className="btn-primary" onClick={this.sendForEmotionAnalysis}>Analyze Emotion</button>
         <br/>
         {this.state.sentimentOutput}
-        {/* {console.info(this.state.sentimentOutput)} */}
       </div>
     );
     }
